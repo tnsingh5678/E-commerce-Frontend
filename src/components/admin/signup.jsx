@@ -45,7 +45,7 @@ const AdminSignup = () => {
     }
 
     try {
-      const response = await fetch('https://e-commerce-backend-im60.onrender.com/seller/signup', {
+      const response = await fetch('https://e-commerce-backend-im60.onrender.com/admin/seller/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

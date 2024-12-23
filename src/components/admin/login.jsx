@@ -182,6 +182,15 @@ const AdminLogin = () => {
                 Login
               </motion.button>
             </div>
+
+            <div className="mt-6 text-center">
+              <p className="text-gray-600 text-sm">
+                Don't have an account? 
+                <a href="/seller/signup" className="text-pink-600 hover:text-pink-800 ml-2 font-semibold">
+                  Sign Up
+                </a>
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>
