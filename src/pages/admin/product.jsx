@@ -107,7 +107,12 @@ const Product = () => {
     formData.append('description', newProduct.description);
     formData.append('Description', JSON.stringify(description));
     newProduct.images.forEach((image) => {
-      formData.append('images', image);
+      
+      if (Array.isArray(newProduct.images)) {
+        formData.append('images', image);
+      } else {
+        console.error("m.images is not an array");
+      }
     });
 
     try {
@@ -150,7 +155,8 @@ const Product = () => {
   };
 
   const handleImageChange = (e) => {
-    setNewProduct({ ...newProduct, images: e.target.files });
+    const filesArray = Array.from(e.target.files);
+    setNewProduct({ ...newProduct, images: filesArray });
   };
 
   const handleEdit = (product) => {
